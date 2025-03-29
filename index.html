@@ -5,42 +5,42 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://api-maps.yandex.ru/v3/?apikey=ada00ac5-0623-419b-b2e3-c51a24261346&lang=ru_RU"></script>
-
-
-    <script>
-        initMap();
-
-        async function initMap() {
-            await ymaps3.ready;
-
-            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
-
-            const map = new YMap(
-                document.getElementById('map'),
-                {
-                    location: {
-                        center: [37.588144, 55.733842],
-                        zoom: 10
-                    }
-                }
-            );
-
-            map.addChild(new YMapDefaultSchemeLayer());
-        }
-    </script>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <script type="module" src="main.js"></script>
   </head>
 
   <body>
-    <div id="map" style="width: 600px; height: 400px"></div>
+    <!-- <div id="map" style="width: 600px; height: 400px"></div> -->
+    <section id="main2" class="pt-24 w-full pb-12 bg-white">
+      <div class="container mx-auto px-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Наше расположение</h2>
+        <div id="map" class="w-full shadow-lg h-[700px] rounded-lg"></div>
+      </div>
+    </section>
 
-    <a href="https://rutube.ru/video/c8ead403abbff178a35c265211aca4cc/" target="_blank" class="relative block w-64 h-36 group">
-        <img src="https://preview.rutube.ru/preview/c8ead403abbff178a35c265211aca4cc.webp" alt="Превью видео" class="w-full h-full object-cover rounded-lg">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="42" cy="42" r="42" fill="currentColor" opacity="0.8"/>
-            <polygon points="32,24 32,60 60,42" fill="black"/>
-          </svg>
-        </div>
-      </a>
+    <a
+      href="https://rutube.ru/video/c8ead403abbff178a35c265211aca4cc/"
+      target="_blank"
+      class="relative block w-64 h-36 group"
+    >
+      <img
+        src="https://preview.rutube.ru/preview/c8ead403abbff178a35c265211aca4cc.webp"
+        alt="Превью видео"
+        class="w-full h-full object-cover rounded-lg"
+      />
+      <!-- <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <svg
+          class="w-12 h-12 text-white"
+          fill="currentColor"
+          viewBox="0 0 84 84"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="42" cy="42" r="42" fill="currentColor" opacity="0.8" />
+          <polygon points="32,24 32,60 60,42" fill="black" />
+        </svg>
+      </div> -->
+    </a>
   </body>
 </html>
